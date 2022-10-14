@@ -1,0 +1,11 @@
+Para a resolução deste exercício, faz-se uso de 3 keys:
+* users - key para os utilizadores
+        Foi utilizado um Set, uma vez que não duplica os dados ao adicionar um utilizador com o mesmo nome.
+
+* followers:<username> - key para os seguidores
+        Foi utilizado um outro Set, pelo mesmo motivo do anterior (a não duplicação dos dados). Cada utilizador tem o seu Set de seguidores.
+
+* messages:<username> - key para as mensagens
+        Foi utilizado uma Lista com todas as mensagens enviadas por cada utilizador.
+
+Não entrego o ficheiro CBD-15a-out.txt porque o programa tem um erro com os Scanners que eu não consegui resolver.

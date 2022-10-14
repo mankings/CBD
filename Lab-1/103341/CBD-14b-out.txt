@@ -1,0 +1,83 @@
+Search for ('Enter' for quit): br
+Bruna                | 142
+Bruno                | 139
+Bryan                | 100
+Brian                | 44
+Briana               | 10
+Brenda               | 10
+Breno                | 6
+Branca               | 4
+Brayan               | 4
+Brianna              | 3
+Brahim               | 2
+Bryanna              | 1
+Bryanne              | 1
+Brandon              | 1
+Braiany              | 1
+Brandão              | 1
+Bronoéalfate         | 1
+Bráulio              | 1
+Brudy                | 1
+Bruce                | 1
+Braima               | 1
+Brigite              | 1
+Brishma              | 1
+Bradley              | 1
+Brisa                | 1
+Braian               | 1
+Brenthon             | 1
+Brayane              | 1
+Brayne               | 1
+Brígida              | 1
+Bryant               | 1
+Britney              | 1
+Bristi               | 1
+Brisha               | 1
+Brayn                | 1
+
+Search for ('Enter' for quit): alm
+Alma                 | 7
+Almir                | 1
+Almerinda            | 1
+
+Search for ('Enter' for quit): port
+
+Search for ('Enter' for quit): pre
+Preciosa             | 1
+Pretty               | 1
+Pregua               | 1
+
+Search for ('Enter' for quit): ay
+Aysha                | 7
+Ayla                 | 5
+Ayaan                | 4
+Aylla                | 3
+Ayra                 | 2
+Ayani                | 2
+Aya                  | 2
+Ayesha               | 2
+Ayrton               | 2
+Ayumi                | 2
+Ayon                 | 1
+Aylton               | 1
+Ayara                | 1
+Ayame                | 1
+Ayana                | 1
+Aynara               | 1
+Aykel                | 1
+Aylin                | 1
+Ayhane               | 1
+Aylén                | 1
+Aylan                | 1
+Ayanne               | 1
+Aymar                | 1
+Ayman                | 1
+Ayad                 | 1
+Ayan                 | 1
+Ayushman             | 1
+Aynoah               | 1
+
+Search for ('Enter' for quit): ayo
+Ayon                 | 1
+
+Search for ('Enter' for quit):

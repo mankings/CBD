@@ -1,0 +1,12 @@
+hset Jola:1 name "Super Bock"
+hset Jola:2 name "Sagres"
+hset Jola:3 name "Cergal"
+hset Jola:1 rating "8"
+hset Jola:2 rating "8"
+hset Jola:3 rating "10"
+hset Jola:1 obs "abre uma mini"
+hset Jola:2 obs "manda vir um fino"
+hset Jola:3 obs "para jantar de curso"
+sadd Bares Santos Dokk Pina Golfinho Maravilhas
+sadd Arvores Carvalho Pinheiro Sobreiro Eucalipto
+sadd Pokemon Pikachu Bulbasaur Charmander Squirtle

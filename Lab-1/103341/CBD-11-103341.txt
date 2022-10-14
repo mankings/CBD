@@ -1,0 +1,65 @@
+help
+help @generic
+help keys
+PING
+DBSIZE
+SET testkey mankings
+TYPE testkey
+KEYS *
+DEL testkey
+EXISTS testkey
+TYPE testkey
+HELP SCAN
+SCAN 0
+KEYS *
+LPUSH Book:1:comment "mankings gordo e velho"
+HELP LPUSH
+HELP LRANGE
+LRANGE Book:1:comment 0 -1
+LRANGE Book:1:comment 0 1
+LRANGE Book:1:comment 0 2
+LPUSH Book:1:comment "uga-se"
+LRANGE Book:1:commnet
+LRANGE Book:1:commnet 0 -1
+LRANGE Book:1:commnent 0 -1
+LRANGE Book:1:comment 0 -1
+RPUSH Book:1:comment "end of coisas"
+LRANGE Book:1:comment 0 -1
+DEL Book:1:comment
+LRANGE Book:1:comment 0 -1
+HSET gordos:1 name "mankings"
+HGET gordos:1 name
+HSET gordos:1 age "20"
+HGET gordos:1 age
+HEXISTS gordos:1 name
+Hgetall gordos:1
+DEL gordos:1
+SET group:1 "Gordos"
+SADD group:1:member Mankings Manucha Manukok Mankini
+SMEMBERS group:1:member
+SCARD group:1:member
+DEl group:1:member
+del group:1
+keys *
+SADD odd 1 3 5 7 9
+SADD even 0 2 4 6 8
+SUNION odd even
+SADD underfive 0 1 2 3 4
+SADD abovefour 5 6 7 8 9
+SINTER even underfive
+SINTER odd even
+SDIFF underfive even
+SINTER underfive odd
+MULTI
+help incr
+help decr
+SET value 5
+DECR value
+decr value
+exec
+multi
+incr value
+decr value
+discard
+incr value
+exec
