@@ -1,0 +1,869 @@
+The dataset used is available at https://www.kaggle.com/datasets/rounakbanik/pokemon.
+Queries were ran using the code found in the PokemonApp.java file
+These are the available fields for each object:
+
+    name: The English name of the Pokemon
+    japanese_name: The Original Japanese name of the Pokemon
+    pokedex_number: The entry number of the Pokemon in the National Pokedex
+    percentage_male: The percentage of the species that are male. Blank if the Pokemon is genderless.
+    type1: The Primary Type of the Pokemon
+    type2: The Secondary Type of the Pokemon
+    classification: The Classification of the Pokemon as described by the Sun and Moon Pokedex
+    height_m: Height of the Pokemon in metres
+    weight_kg: The Weight of the Pokemon in kilograms
+    capture_rate: Capture Rate of the Pokemon
+    baseeggsteps: The number of steps required to hatch an egg of the Pokemon
+    abilities: A stringified list of abilities that the Pokemon is capable of having
+    experience_growth: The Experience Growth of the Pokemon
+    base_happiness: Base Happiness of the Pokemon
+    against_?: Eighteen features that denote the amount of damage taken against an attack of a particular type
+    hp: The Base HP of the Pokemon
+    attack: The Base Attack of the Pokemon
+    defense: The Base Defense of the Pokemon
+    sp_attack: The Base Special Attack of the Pokemon
+    sp_defense: The Base Special Defense of the Pokemon
+    speed: The Base Speed of the Pokemon
+    generation: The numbered generation which the Pokemon was first introduced
+    is_legendary: Denotes if the Pokemon is legendary.
+
+        --=[ alínea c) ]=--
+
+Query 1 - Get name and catch rate of all legendary Pokémon.
+{"capture_rate": "3", "name": "Zapdos"}
+{"capture_rate": "3", "name": "Moltres"}
+{"capture_rate": "3", "name": "Articuno"}
+{"capture_rate": "3", "name": "Mewtwo"}
+{"capture_rate": "45", "name": "Mew"}
+{"capture_rate": "3", "name": "Entei"}
+{"capture_rate": "3", "name": "Raikou"}
+{"capture_rate": "3", "name": "Suicune"}
+{"capture_rate": "3", "name": "Lugia"}
+{"capture_rate": "45", "name": "Celebi"}
+{"capture_rate": "3", "name": "Ho-Oh"}
+{"capture_rate": "3", "name": "Regirock"}
+{"capture_rate": "3", "name": "Registeel"}
+{"capture_rate": "3", "name": "Latias"}
+{"capture_rate": "3", "name": "Latios"}
+{"capture_rate": "3", "name": "Regice"}
+{"capture_rate": "3", "name": "Groudon"}
+{"capture_rate": "3", "name": "Deoxys"}
+{"capture_rate": "45", "name": "Rayquaza"}
+{"capture_rate": "3", "name": "Kyogre"}
+{"capture_rate": "3", "name": "Jirachi"}
+{"capture_rate": "3", "name": "Uxie"}
+{"capture_rate": "3", "name": "Mesprit"}
+{"capture_rate": "3", "name": "Azelf"}
+{"capture_rate": "3", "name": "Dialga"}
+{"capture_rate": "3", "name": "Heatran"}
+{"capture_rate": "3", "name": "Giratina"}
+{"capture_rate": "3", "name": "Cresselia"}
+{"capture_rate": "45", "name": "Shaymin"}
+{"capture_rate": "3", "name": "Arceus"}
+{"capture_rate": "3", "name": "Victini"}
+{"capture_rate": "3", "name": "Darkrai"}
+{"capture_rate": "3", "name": "Regigigas"}
+{"capture_rate": "3", "name": "Manaphy"}
+{"capture_rate": "3", "name": "Palkia"}
+{"capture_rate": "3", "name": "Cobalion"}
+{"capture_rate": "3", "name": "Tornadus"}
+{"capture_rate": "3", "name": "Terrakion"}
+{"capture_rate": "3", "name": "Virizion"}
+{"capture_rate": "3", "name": "Reshiram"}
+{"capture_rate": "3", "name": "Zekrom"}
+{"capture_rate": "3", "name": "Thundurus"}
+{"capture_rate": "3", "name": "Kyurem"}
+{"capture_rate": "3", "name": "Landorus"}
+{"capture_rate": "3", "name": "Meloetta"}
+{"capture_rate": "3", "name": "Genesect"}
+{"capture_rate": "3", "name": "Keldeo"}
+{"capture_rate": "45", "name": "Yveltal"}
+{"capture_rate": "3", "name": "Zygarde"}
+{"capture_rate": "3", "name": "Diancie"}
+{"capture_rate": "3", "name": "Hoopa"}
+{"capture_rate": "3", "name": "Volcanion"}
+{"capture_rate": "45", "name": "Xerneas"}
+{"capture_rate": "3", "name": "Tapu Koko"}
+{"capture_rate": "3", "name": "Tapu Lele"}
+{"capture_rate": "3", "name": "Tapu Bulu"}
+{"capture_rate": "3", "name": "Tapu Fini"}
+{"capture_rate": "45", "name": "Solgaleo"}
+{"capture_rate": "45", "name": "Lunala"}
+{"capture_rate": "45", "name": "Nihilego"}
+{"capture_rate": "25", "name": "Buzzwole"}
+{"capture_rate": "30", "name": "Xurkitree"}
+{"capture_rate": "45", "name": "Cosmoem"}
+{"capture_rate": "3", "name": "Necrozma"}
+{"capture_rate": "15", "name": "Guzzlord"}
+{"capture_rate": "255", "name": "Kartana"}
+{"capture_rate": "3", "name": "Magearna"}
+{"capture_rate": "25", "name": "Celesteela"}
+{"capture_rate": "255", "name": "Pheromosa"}
+{"capture_rate": "45", "name": "Cosmog"}
+
+Query 2 - Get name and pokédex number of all Pokémon that have a male rate of at least 70%.
+{"name": "Bulbasaur", "pokedex_number": 1}
+{"name": "Charmeleon", "pokedex_number": 5}
+{"name": "Charizard", "pokedex_number": 6}
+{"name": "Blastoise", "pokedex_number": 9}
+{"name": "Ivysaur", "pokedex_number": 2}
+{"name": "Venusaur", "pokedex_number": 3}
+{"name": "Squirtle", "pokedex_number": 7}
+{"name": "Charmander", "pokedex_number": 4}
+{"name": "Wartortle", "pokedex_number": 8}
+{"name": "Nidoran♂", "pokedex_number": 32}
+{"name": "Nidorino", "pokedex_number": 33}
+{"name": "Nidoking", "pokedex_number": 34}
+{"name": "Growlithe", "pokedex_number": 58}
+{"name": "Arcanine", "pokedex_number": 59}
+{"name": "Abra", "pokedex_number": 63}
+{"name": "Kadabra", "pokedex_number": 64}
+{"name": "Machoke", "pokedex_number": 67}
+{"name": "Machamp", "pokedex_number": 68}
+{"name": "Machop", "pokedex_number": 66}
+{"name": "Alakazam", "pokedex_number": 65}
+{"name": "Hitmonlee", "pokedex_number": 106}
+{"name": "Hitmonchan", "pokedex_number": 107}
+{"name": "Electabuzz", "pokedex_number": 125}
+{"name": "Tauros", "pokedex_number": 128}
+{"name": "Eevee", "pokedex_number": 133}
+{"name": "Vaporeon", "pokedex_number": 134}
+{"name": "Jolteon", "pokedex_number": 135}
+{"name": "Flareon", "pokedex_number": 136}
+{"name": "Magmar", "pokedex_number": 126}
+{"name": "Kabuto", "pokedex_number": 140}
+{"name": "Aerodactyl", "pokedex_number": 142}
+{"name": "Snorlax", "pokedex_number": 143}
+{"name": "Chikorita", "pokedex_number": 152}
+{"name": "Bayleef", "pokedex_number": 153}
+{"name": "Meganium", "pokedex_number": 154}
+{"name": "Cyndaquil", "pokedex_number": 155}
+{"name": "Omastar", "pokedex_number": 139}
+{"name": "Totodile", "pokedex_number": 158}
+{"name": "Feraligatr", "pokedex_number": 160}
+{"name": "Croconaw", "pokedex_number": 159}
+{"name": "Omanyte", "pokedex_number": 138}
+{"name": "Typhlosion", "pokedex_number": 157}
+{"name": "Kabutops", "pokedex_number": 141}
+{"name": "Quilava", "pokedex_number": 156}
+{"name": "Togepi", "pokedex_number": 175}
+{"name": "Togetic", "pokedex_number": 176}
+{"name": "Espeon", "pokedex_number": 196}
+{"name": "Umbreon", "pokedex_number": 197}
+{"name": "Tyrogue", "pokedex_number": 236}
+{"name": "Hitmontop", "pokedex_number": 237}
+{"name": "Elekid", "pokedex_number": 239}
+{"name": "Magby", "pokedex_number": 240}
+{"name": "Treecko", "pokedex_number": 252}
+{"name": "Blaziken", "pokedex_number": 257}
+{"name": "Sceptile", "pokedex_number": 254}
+{"name": "Swampert", "pokedex_number": 260}
+{"name": "Marshtomp", "pokedex_number": 259}
+{"name": "Mudkip", "pokedex_number": 258}
+{"name": "Grovyle", "pokedex_number": 253}
+{"name": "Combusken", "pokedex_number": 256}
+{"name": "Torchic", "pokedex_number": 255}
+{"name": "Makuhita", "pokedex_number": 296}
+{"name": "Hariyama", "pokedex_number": 297}
+{"name": "Volbeat", "pokedex_number": 313}
+{"name": "Lileep", "pokedex_number": 345}
+{"name": "Cradily", "pokedex_number": 346}
+{"name": "Anorith", "pokedex_number": 347}
+{"name": "Armaldo", "pokedex_number": 348}
+{"name": "Relicanth", "pokedex_number": 369}
+{"name": "Latios", "pokedex_number": 381}
+{"name": "Turtwig", "pokedex_number": 387}
+{"name": "Grotle", "pokedex_number": 388}
+{"name": "Torterra", "pokedex_number": 389}
+{"name": "Chimchar", "pokedex_number": 390}
+{"name": "Infernape", "pokedex_number": 392}
+{"name": "Monferno", "pokedex_number": 391}
+{"name": "Piplup", "pokedex_number": 393}
+{"name": "Empoleon", "pokedex_number": 395}
+{"name": "Prinplup", "pokedex_number": 394}
+{"name": "Cranidos", "pokedex_number": 408}
+{"name": "Rampardos", "pokedex_number": 409}
+{"name": "Shieldon", "pokedex_number": 410}
+{"name": "Bastiodon", "pokedex_number": 411}
+{"name": "Mothim", "pokedex_number": 414}
+{"name": "Combee", "pokedex_number": 415}
+{"name": "Munchlax", "pokedex_number": 446}
+{"name": "Riolu", "pokedex_number": 447}
+{"name": "Lucario", "pokedex_number": 448}
+{"name": "Magmortar", "pokedex_number": 467}
+{"name": "Electivire", "pokedex_number": 466}
+{"name": "Togekiss", "pokedex_number": 468}
+{"name": "Leafeon", "pokedex_number": 470}
+{"name": "Glaceon", "pokedex_number": 471}
+{"name": "Gallade", "pokedex_number": 475}
+{"name": "Snivy", "pokedex_number": 495}
+{"name": "Servine", "pokedex_number": 496}
+{"name": "Serperior", "pokedex_number": 497}
+{"name": "Tepig", "pokedex_number": 498}
+{"name": "Pignite", "pokedex_number": 499}
+{"name": "Emboar", "pokedex_number": 500}
+{"name": "Oshawott", "pokedex_number": 501}
+{"name": "Dewott", "pokedex_number": 502}
+{"name": "Samurott", "pokedex_number": 503}
+{"name": "Pansage", "pokedex_number": 511}
+{"name": "Simisage", "pokedex_number": 512}
+{"name": "Pansear", "pokedex_number": 513}
+{"name": "Panpour", "pokedex_number": 515}
+{"name": "Simisear", "pokedex_number": 514}
+{"name": "Simipour", "pokedex_number": 516}
+{"name": "Timburr", "pokedex_number": 532}
+{"name": "Gurdurr", "pokedex_number": 533}
+{"name": "Conkeldurr", "pokedex_number": 534}
+{"name": "Throh", "pokedex_number": 538}
+{"name": "Sawk", "pokedex_number": 539}
+{"name": "Archeops", "pokedex_number": 567}
+{"name": "Zoroark", "pokedex_number": 571}
+{"name": "Zorua", "pokedex_number": 570}
+{"name": "Tirtouga", "pokedex_number": 564}
+{"name": "Archen", "pokedex_number": 566}
+{"name": "Carracosta", "pokedex_number": 565}
+{"name": "Rufflet", "pokedex_number": 627}
+{"name": "Braviary", "pokedex_number": 628}
+{"name": "Tornadus", "pokedex_number": 641}
+{"name": "Thundurus", "pokedex_number": 642}
+{"name": "Landorus", "pokedex_number": 645}
+{"name": "Chespin", "pokedex_number": 650}
+{"name": "Quilladin", "pokedex_number": 651}
+{"name": "Chesnaught", "pokedex_number": 652}
+{"name": "Fennekin", "pokedex_number": 653}
+{"name": "Braixen", "pokedex_number": 654}
+{"name": "Delphox", "pokedex_number": 655}
+{"name": "Froakie", "pokedex_number": 656}
+{"name": "Frogadier", "pokedex_number": 657}
+{"name": "Greninja", "pokedex_number": 658}
+{"name": "Tyrunt", "pokedex_number": 696}
+{"name": "Amaura", "pokedex_number": 698}
+{"name": "Tyrantrum", "pokedex_number": 697}
+{"name": "Sylveon", "pokedex_number": 700}
+{"name": "Aurorus", "pokedex_number": 699}
+{"name": "Decidueye", "pokedex_number": 724}
+{"name": "Rowlet", "pokedex_number": 722}
+{"name": "Dartrix", "pokedex_number": 723}
+{"name": "Litten", "pokedex_number": 725}
+{"name": "Brionne", "pokedex_number": 729}
+{"name": "Torracat", "pokedex_number": 726}
+{"name": "Popplio", "pokedex_number": 728}
+{"name": "Incineroar", "pokedex_number": 727}
+{"name": "Primarina", "pokedex_number": 730}
+{"name": "Salandit", "pokedex_number": 757}
+
+Query 3 - Get name, pokédex number and type of all Pokémon without a secondary type.
+{"name": "Charmeleon", "pokedex_number": 5, "type1": "fire"}
+{"name": "Blastoise", "pokedex_number": 9, "type1": "water"}
+{"name": "Caterpie", "pokedex_number": 10, "type1": "bug"}
+{"name": "Metapod", "pokedex_number": 11, "type1": "bug"}
+{"name": "Squirtle", "pokedex_number": 7, "type1": "water"}
+{"name": "Charmander", "pokedex_number": 4, "type1": "fire"}
+{"name": "Wartortle", "pokedex_number": 8, "type1": "water"}
+{"name": "Arbok", "pokedex_number": 24, "type1": "poison"}
+{"name": "Pikachu", "pokedex_number": 25, "type1": "electric"}
+{"name": "Nidoran♀", "pokedex_number": 29, "type1": "poison"}
+{"name": "Ekans", "pokedex_number": 23, "type1": "poison"}
+{"name": "Nidorina", "pokedex_number": 30, "type1": "poison"}
+{"name": "Nidoran♂", "pokedex_number": 32, "type1": "poison"}
+{"name": "Nidorino", "pokedex_number": 33, "type1": "poison"}
+{"name": "Clefairy", "pokedex_number": 35, "type1": "fairy"}
+{"name": "Clefable", "pokedex_number": 36, "type1": "fairy"}
+{"name": "Golduck", "pokedex_number": 55, "type1": "water"}
+{"name": "Psyduck", "pokedex_number": 54, "type1": "water"}
+{"name": "Primeape", "pokedex_number": 57, "type1": "fighting"}
+{"name": "Mankey", "pokedex_number": 56, "type1": "fighting"}
+{"name": "Growlithe", "pokedex_number": 58, "type1": "fire"}
+{"name": "Arcanine", "pokedex_number": 59, "type1": "fire"}
+{"name": "Poliwag", "pokedex_number": 60, "type1": "water"}
+{"name": "Poliwhirl", "pokedex_number": 61, "type1": "water"}
+{"name": "Abra", "pokedex_number": 63, "type1": "psychic"}
+{"name": "Kadabra", "pokedex_number": 64, "type1": "psychic"}
+{"name": "Machoke", "pokedex_number": 67, "type1": "fighting"}
+{"name": "Machamp", "pokedex_number": 68, "type1": "fighting"}
+{"name": "Machop", "pokedex_number": 66, "type1": "fighting"}
+{"name": "Alakazam", "pokedex_number": 65, "type1": "psychic"}
+{"name": "Ponyta", "pokedex_number": 77, "type1": "fire"}
+{"name": "Rapidash", "pokedex_number": 78, "type1": "fire"}
+{"name": "Seel", "pokedex_number": 86, "type1": "water"}
+{"name": "Shellder", "pokedex_number": 90, "type1": "water"}
+{"name": "Krabby", "pokedex_number": 98, "type1": "water"}
+{"name": "Hypno", "pokedex_number": 97, "type1": "psychic"}
+{"name": "Drowzee", "pokedex_number": 96, "type1": "psychic"}
+{"name": "Kingler", "pokedex_number": 99, "type1": "water"}
+{"name": "Voltorb", "pokedex_number": 100, "type1": "electric"}
+{"name": "Cubone", "pokedex_number": 104, "type1": "ground"}
+{"name": "Koffing", "pokedex_number": 109, "type1": "poison"}
+{"name": "Electrode", "pokedex_number": 101, "type1": "electric"}
+{"name": "Weezing", "pokedex_number": 110, "type1": "poison"}
+{"name": "Lickitung", "pokedex_number": 108, "type1": "normal"}
+{"name": "Hitmonlee", "pokedex_number": 106, "type1": "fighting"}
+{"name": "Chansey", "pokedex_number": 113, "type1": "normal"}
+{"name": "Kangaskhan", "pokedex_number": 115, "type1": "normal"}
+{"name": "Horsea", "pokedex_number": 116, "type1": "water"}
+{"name": "Tangela", "pokedex_number": 114, "type1": "grass"}
+{"name": "Seadra", "pokedex_number": 117, "type1": "water"}
+{"name": "Goldeen", "pokedex_number": 118, "type1": "water"}
+{"name": "Seaking", "pokedex_number": 119, "type1": "water"}
+{"name": "Hitmonchan", "pokedex_number": 107, "type1": "fighting"}
+{"name": "Electabuzz", "pokedex_number": 125, "type1": "electric"}
+{"name": "Tauros", "pokedex_number": 128, "type1": "normal"}
+{"name": "Pinsir", "pokedex_number": 127, "type1": "bug"}
+{"name": "Magikarp", "pokedex_number": 129, "type1": "water"}
+{"name": "Staryu", "pokedex_number": 120, "type1": "water"}
+{"name": "Eevee", "pokedex_number": 133, "type1": "normal"}
+{"name": "Vaporeon", "pokedex_number": 134, "type1": "water"}
+{"name": "Jolteon", "pokedex_number": 135, "type1": "electric"}
+{"name": "Flareon", "pokedex_number": 136, "type1": "fire"}
+{"name": "Porygon", "pokedex_number": 137, "type1": "normal"}
+{"name": "Ditto", "pokedex_number": 132, "type1": "normal"}
+{"name": "Magmar", "pokedex_number": 126, "type1": "fire"}
+{"name": "Snorlax", "pokedex_number": 143, "type1": "normal"}
+{"name": "Dratini", "pokedex_number": 147, "type1": "dragon"}
+{"name": "Dragonair", "pokedex_number": 148, "type1": "dragon"}
+{"name": "Mewtwo", "pokedex_number": 150, "type1": "psychic"}
+{"name": "Mew", "pokedex_number": 151, "type1": "psychic"}
+{"name": "Chikorita", "pokedex_number": 152, "type1": "grass"}
+{"name": "Bayleef", "pokedex_number": 153, "type1": "grass"}
+{"name": "Meganium", "pokedex_number": 154, "type1": "grass"}
+{"name": "Cyndaquil", "pokedex_number": 155, "type1": "fire"}
+{"name": "Totodile", "pokedex_number": 158, "type1": "water"}
+{"name": "Feraligatr", "pokedex_number": 160, "type1": "water"}
+{"name": "Croconaw", "pokedex_number": 159, "type1": "water"}
+{"name": "Sentret", "pokedex_number": 161, "type1": "normal"}
+{"name": "Typhlosion", "pokedex_number": 157, "type1": "fire"}
+{"name": "Furret", "pokedex_number": 162, "type1": "normal"}
+{"name": "Quilava", "pokedex_number": 156, "type1": "fire"}
+{"name": "Pichu", "pokedex_number": 172, "type1": "electric"}
+{"name": "Cleffa", "pokedex_number": 173, "type1": "fairy"}
+{"name": "Mareep", "pokedex_number": 179, "type1": "electric"}
+{"name": "Flaaffy", "pokedex_number": 180, "type1": "electric"}
+{"name": "Togepi", "pokedex_number": 175, "type1": "fairy"}
+{"name": "Ampharos", "pokedex_number": 181, "type1": "electric"}
+{"name": "Bellossom", "pokedex_number": 182, "type1": "grass"}
+{"name": "Politoed", "pokedex_number": 186, "type1": "water"}
+{"name": "Sudowoodo", "pokedex_number": 185, "type1": "rock"}
+{"name": "Aipom", "pokedex_number": 190, "type1": "normal"}
+{"name": "Sunflora", "pokedex_number": 192, "type1": "grass"}
+{"name": "Sunkern", "pokedex_number": 191, "type1": "grass"}
+{"name": "Espeon", "pokedex_number": 196, "type1": "psychic"}
+{"name": "Umbreon", "pokedex_number": 197, "type1": "dark"}
+{"name": "Misdreavus", "pokedex_number": 200, "type1": "ghost"}
+{"name": "Wobbuffet", "pokedex_number": 202, "type1": "psychic"}
+{"name": "Pineco", "pokedex_number": 204, "type1": "bug"}
+{"name": "Dunsparce", "pokedex_number": 206, "type1": "normal"}
+{"name": "Unown", "pokedex_number": 201, "type1": "psychic"}
+{"name": "Granbull", "pokedex_number": 210, "type1": "fairy"}
+{"name": "Teddiursa", "pokedex_number": 216, "type1": "normal"}
+{"name": "Ursaring", "pokedex_number": 217, "type1": "normal"}
+{"name": "Slugma", "pokedex_number": 218, "type1": "fire"}
+{"name": "Remoraid", "pokedex_number": 223, "type1": "water"}
+{"name": "Octillery", "pokedex_number": 224, "type1": "water"}
+{"name": "Phanpy", "pokedex_number": 231, "type1": "ground"}
+{"name": "Donphan", "pokedex_number": 232, "type1": "ground"}
+{"name": "Porygon2", "pokedex_number": 233, "type1": "normal"}
+{"name": "Stantler", "pokedex_number": 234, "type1": "normal"}
+{"name": "Smeargle", "pokedex_number": 235, "type1": "normal"}
+{"name": "Tyrogue", "pokedex_number": 236, "type1": "fighting"}
+{"name": "Hitmontop", "pokedex_number": 237, "type1": "fighting"}
+{"name": "Elekid", "pokedex_number": 239, "type1": "electric"}
+{"name": "Magby", "pokedex_number": 240, "type1": "fire"}
+{"name": "Snubbull", "pokedex_number": 209, "type1": "fairy"}
+{"name": "Miltank", "pokedex_number": 241, "type1": "normal"}
+{"name": "Entei", "pokedex_number": 244, "type1": "fire"}
+{"name": "Raikou", "pokedex_number": 243, "type1": "electric"}
+{"name": "Suicune", "pokedex_number": 245, "type1": "water"}
+{"name": "Blissey", "pokedex_number": 242, "type1": "normal"}
+{"name": "Treecko", "pokedex_number": 252, "type1": "grass"}
+{"name": "Sceptile", "pokedex_number": 254, "type1": "grass"}
+{"name": "Poochyena", "pokedex_number": 261, "type1": "dark"}
+{"name": "Mudkip", "pokedex_number": 258, "type1": "water"}
+{"name": "Mightyena", "pokedex_number": 262, "type1": "dark"}
+{"name": "Linoone", "pokedex_number": 264, "type1": "normal"}
+{"name": "Zigzagoon", "pokedex_number": 263, "type1": "normal"}
+{"name": "Silcoon", "pokedex_number": 266, "type1": "bug"}
+{"name": "Wurmple", "pokedex_number": 265, "type1": "bug"}
+{"name": "Grovyle", "pokedex_number": 253, "type1": "grass"}
+{"name": "Cascoon", "pokedex_number": 268, "type1": "bug"}
+{"name": "Seedot", "pokedex_number": 273, "type1": "grass"}
+{"name": "Torchic", "pokedex_number": 255, "type1": "fire"}
+{"name": "Shroomish", "pokedex_number": 285, "type1": "grass"}
+{"name": "Slakoth", "pokedex_number": 287, "type1": "normal"}
+{"name": "Vigoroth", "pokedex_number": 288, "type1": "normal"}
+{"name": "Slaking", "pokedex_number": 289, "type1": "normal"}
+{"name": "Whismur", "pokedex_number": 293, "type1": "normal"}
+{"name": "Loudred", "pokedex_number": 294, "type1": "normal"}
+{"name": "Exploud", "pokedex_number": 295, "type1": "normal"}
+{"name": "Makuhita", "pokedex_number": 296, "type1": "fighting"}
+{"name": "Hariyama", "pokedex_number": 297, "type1": "fighting"}
+{"name": "Nosepass", "pokedex_number": 299, "type1": "rock"}
+{"name": "Skitty", "pokedex_number": 300, "type1": "normal"}
+{"name": "Delcatty", "pokedex_number": 301, "type1": "normal"}
+{"name": "Electrike", "pokedex_number": 309, "type1": "electric"}
+{"name": "Manectric", "pokedex_number": 310, "type1": "electric"}
+{"name": "Volbeat", "pokedex_number": 313, "type1": "bug"}
+{"name": "Plusle", "pokedex_number": 311, "type1": "electric"}
+{"name": "Illumise", "pokedex_number": 314, "type1": "bug"}
+{"name": "Wailmer", "pokedex_number": 320, "type1": "water"}
+{"name": "Wailord", "pokedex_number": 321, "type1": "water"}
+{"name": "Torkoal", "pokedex_number": 324, "type1": "fire"}
+{"name": "Spoink", "pokedex_number": 325, "type1": "psychic"}
+{"name": "Grumpig", "pokedex_number": 326, "type1": "psychic"}
+{"name": "Spinda", "pokedex_number": 327, "type1": "normal"}
+{"name": "Trapinch", "pokedex_number": 328, "type1": "ground"}
+{"name": "Swalot", "pokedex_number": 317, "type1": "poison"}
+{"name": "Cacnea", "pokedex_number": 331, "type1": "grass"}
+{"name": "Minun", "pokedex_number": 312, "type1": "electric"}
+{"name": "Seviper", "pokedex_number": 336, "type1": "poison"}
+{"name": "Zangoose", "pokedex_number": 335, "type1": "normal"}
+{"name": "Corphish", "pokedex_number": 341, "type1": "water"}
+{"name": "Castform", "pokedex_number": 351, "type1": "normal"}
+{"name": "Kecleon", "pokedex_number": 352, "type1": "normal"}
+{"name": "Milotic", "pokedex_number": 350, "type1": "water"}
+{"name": "Feebas", "pokedex_number": 349, "type1": "water"}
+{"name": "Shuppet", "pokedex_number": 353, "type1": "ghost"}
+{"name": "Banette", "pokedex_number": 354, "type1": "ghost"}
+{"name": "Dusclops", "pokedex_number": 356, "type1": "ghost"}
+{"name": "Duskull", "pokedex_number": 355, "type1": "ghost"}
+{"name": "Chimecho", "pokedex_number": 358, "type1": "psychic"}
+{"name": "Gulpin", "pokedex_number": 316, "type1": "poison"}
+{"name": "Wynaut", "pokedex_number": 360, "type1": "psychic"}
+{"name": "Absol", "pokedex_number": 359, "type1": "dark"}
+{"name": "Snorunt", "pokedex_number": 361, "type1": "ice"}
+{"name": "Glalie", "pokedex_number": 362, "type1": "ice"}
+{"name": "Bagon", "pokedex_number": 371, "type1": "dragon"}
+{"name": "Luvdisc", "pokedex_number": 370, "type1": "water"}
+{"name": "Shelgon", "pokedex_number": 372, "type1": "dragon"}
+{"name": "Regirock", "pokedex_number": 377, "type1": "rock"}
+{"name": "Registeel", "pokedex_number": 379, "type1": "steel"}
+{"name": "Regice", "pokedex_number": 378, "type1": "ice"}
+{"name": "Huntail", "pokedex_number": 367, "type1": "water"}
+{"name": "Clamperl", "pokedex_number": 366, "type1": "water"}
+{"name": "Gorebyss", "pokedex_number": 368, "type1": "water"}
+{"name": "Turtwig", "pokedex_number": 387, "type1": "grass"}
+{"name": "Grotle", "pokedex_number": 388, "type1": "grass"}
+{"name": "Groudon", "pokedex_number": 383, "type1": "ground"}
+{"name": "Chimchar", "pokedex_number": 390, "type1": "fire"}
+{"name": "Deoxys", "pokedex_number": 386, "type1": "psychic"}
+{"name": "Piplup", "pokedex_number": 393, "type1": "water"}
+{"name": "Prinplup", "pokedex_number": 394, "type1": "water"}
+{"name": "Bidoof", "pokedex_number": 399, "type1": "normal"}
+{"name": "Kricketot", "pokedex_number": 401, "type1": "bug"}
+{"name": "Kyogre", "pokedex_number": 382, "type1": "water"}
+{"name": "Cranidos", "pokedex_number": 408, "type1": "rock"}
+{"name": "Shinx", "pokedex_number": 403, "type1": "electric"}
+{"name": "Rampardos", "pokedex_number": 409, "type1": "rock"}
+{"name": "Burmy", "pokedex_number": 412, "type1": "bug"}
+{"name": "Kricketune", "pokedex_number": 402, "type1": "bug"}
+{"name": "Pachirisu", "pokedex_number": 417, "type1": "electric"}
+{"name": "Buizel", "pokedex_number": 418, "type1": "water"}
+{"name": "Floatzel", "pokedex_number": 419, "type1": "water"}
+{"name": "Cherubi", "pokedex_number": 420, "type1": "grass"}
+{"name": "Luxio", "pokedex_number": 404, "type1": "electric"}
+{"name": "Luxray", "pokedex_number": 405, "type1": "electric"}
+{"name": "Ambipom", "pokedex_number": 424, "type1": "normal"}
+{"name": "Buneary", "pokedex_number": 427, "type1": "normal"}
+{"name": "Lopunny", "pokedex_number": 428, "type1": "normal"}
+{"name": "Glameow", "pokedex_number": 431, "type1": "normal"}
+{"name": "Mismagius", "pokedex_number": 429, "type1": "ghost"}
+{"name": "Purugly", "pokedex_number": 432, "type1": "normal"}
+{"name": "Cherrim", "pokedex_number": 421, "type1": "grass"}
+{"name": "Shellos", "pokedex_number": 422, "type1": "water"}
+{"name": "Chingling", "pokedex_number": 433, "type1": "psychic"}
+{"name": "Bonsly", "pokedex_number": 438, "type1": "rock"}
+{"name": "Happiny", "pokedex_number": 440, "type1": "normal"}
+{"name": "Munchlax", "pokedex_number": 446, "type1": "normal"}
+{"name": "Riolu", "pokedex_number": 447, "type1": "fighting"}
+{"name": "Hippowdon", "pokedex_number": 450, "type1": "ground"}
+{"name": "Carnivine", "pokedex_number": 455, "type1": "grass"}
+{"name": "Lumineon", "pokedex_number": 457, "type1": "water"}
+{"name": "Finneon", "pokedex_number": 456, "type1": "water"}
+{"name": "Lickilicky", "pokedex_number": 463, "type1": "normal"}
+{"name": "Hippopotas", "pokedex_number": 449, "type1": "ground"}
+{"name": "Magmortar", "pokedex_number": 467, "type1": "fire"}
+{"name": "Tangrowth", "pokedex_number": 465, "type1": "grass"}
+{"name": "Electivire", "pokedex_number": 466, "type1": "electric"}
+{"name": "Leafeon", "pokedex_number": 470, "type1": "grass"}
+{"name": "Glaceon", "pokedex_number": 471, "type1": "ice"}
+{"name": "Porygon-Z", "pokedex_number": 474, "type1": "normal"}
+{"name": "Dusknoir", "pokedex_number": 477, "type1": "ghost"}
+{"name": "Uxie", "pokedex_number": 480, "type1": "psychic"}
+{"name": "Mesprit", "pokedex_number": 481, "type1": "psychic"}
+{"name": "Azelf", "pokedex_number": 482, "type1": "psychic"}
+{"name": "Cresselia", "pokedex_number": 488, "type1": "psychic"}
+{"name": "Arceus", "pokedex_number": 493, "type1": "normal"}
+{"name": "Snivy", "pokedex_number": 495, "type1": "grass"}
+{"name": "Darkrai", "pokedex_number": 491, "type1": "dark"}
+{"name": "Servine", "pokedex_number": 496, "type1": "grass"}
+{"name": "Serperior", "pokedex_number": 497, "type1": "grass"}
+{"name": "Tepig", "pokedex_number": 498, "type1": "fire"}
+{"name": "Oshawott", "pokedex_number": 501, "type1": "water"}
+{"name": "Dewott", "pokedex_number": 502, "type1": "water"}
+{"name": "Patrat", "pokedex_number": 504, "type1": "normal"}
+{"name": "Samurott", "pokedex_number": 503, "type1": "water"}
+{"name": "Regigigas", "pokedex_number": 486, "type1": "normal"}
+{"name": "Phione", "pokedex_number": 489, "type1": "water"}
+{"name": "Manaphy", "pokedex_number": 490, "type1": "water"}
+{"name": "Liepard", "pokedex_number": 510, "type1": "dark"}
+{"name": "Pansage", "pokedex_number": 511, "type1": "grass"}
+{"name": "Simisage", "pokedex_number": 512, "type1": "grass"}
+{"name": "Purrloin", "pokedex_number": 509, "type1": "dark"}
+{"name": "Pansear", "pokedex_number": 513, "type1": "fire"}
+{"name": "Panpour", "pokedex_number": 515, "type1": "water"}
+{"name": "Simisear", "pokedex_number": 514, "type1": "fire"}
+{"name": "Simipour", "pokedex_number": 516, "type1": "water"}
+{"name": "Munna", "pokedex_number": 517, "type1": "psychic"}
+{"name": "Musharna", "pokedex_number": 518, "type1": "psychic"}
+{"name": "Lillipup", "pokedex_number": 506, "type1": "normal"}
+{"name": "Herdier", "pokedex_number": 507, "type1": "normal"}
+{"name": "Watchog", "pokedex_number": 505, "type1": "normal"}
+{"name": "Stoutland", "pokedex_number": 508, "type1": "normal"}
+{"name": "Roggenrola", "pokedex_number": 524, "type1": "rock"}
+{"name": "Drilbur", "pokedex_number": 529, "type1": "ground"}
+{"name": "Audino", "pokedex_number": 531, "type1": "normal"}
+{"name": "Timburr", "pokedex_number": 532, "type1": "fighting"}
+{"name": "Gurdurr", "pokedex_number": 533, "type1": "fighting"}
+{"name": "Conkeldurr", "pokedex_number": 534, "type1": "fighting"}
+{"name": "Tympole", "pokedex_number": 535, "type1": "water"}
+{"name": "Throh", "pokedex_number": 538, "type1": "fighting"}
+{"name": "Sawk", "pokedex_number": 539, "type1": "fighting"}
+{"name": "Blitzle", "pokedex_number": 522, "type1": "electric"}
+{"name": "Zebstrika", "pokedex_number": 523, "type1": "electric"}
+{"name": "Boldore", "pokedex_number": 525, "type1": "rock"}
+{"name": "Gigalith", "pokedex_number": 526, "type1": "rock"}
+{"name": "Petilil", "pokedex_number": 548, "type1": "grass"}
+{"name": "Lilligant", "pokedex_number": 549, "type1": "grass"}
+{"name": "Basculin", "pokedex_number": 550, "type1": "water"}
+{"name": "Darumaka", "pokedex_number": 554, "type1": "fire"}
+{"name": "Maractus", "pokedex_number": 556, "type1": "grass"}
+{"name": "Yamask", "pokedex_number": 562, "type1": "ghost"}
+{"name": "Trubbish", "pokedex_number": 568, "type1": "poison"}
+{"name": "Garbodor", "pokedex_number": 569, "type1": "poison"}
+{"name": "Zoroark", "pokedex_number": 571, "type1": "dark"}
+{"name": "Zorua", "pokedex_number": 570, "type1": "dark"}
+{"name": "Cinccino", "pokedex_number": 573, "type1": "normal"}
+{"name": "Minccino", "pokedex_number": 572, "type1": "normal"}
+{"name": "Gothita", "pokedex_number": 574, "type1": "psychic"}
+{"name": "Gothorita", "pokedex_number": 575, "type1": "psychic"}
+{"name": "Gothitelle", "pokedex_number": 576, "type1": "psychic"}
+{"name": "Solosis", "pokedex_number": 577, "type1": "psychic"}
+{"name": "Duosion", "pokedex_number": 578, "type1": "psychic"}
+{"name": "Reuniclus", "pokedex_number": 579, "type1": "psychic"}
+{"name": "Cofagrigus", "pokedex_number": 563, "type1": "ghost"}
+{"name": "Vanillish", "pokedex_number": 583, "type1": "ice"}
+{"name": "Karrablast", "pokedex_number": 588, "type1": "bug"}
+{"name": "Alomomola", "pokedex_number": 594, "type1": "water"}
+{"name": "Klink", "pokedex_number": 599, "type1": "steel"}
+{"name": "Klinklang", "pokedex_number": 601, "type1": "steel"}
+{"name": "Tynamo", "pokedex_number": 602, "type1": "electric"}
+{"name": "Eelektrik", "pokedex_number": 603, "type1": "electric"}
+{"name": "Beheeyem", "pokedex_number": 606, "type1": "psychic"}
+{"name": "Vanillite", "pokedex_number": 582, "type1": "ice"}
+{"name": "Vanilluxe", "pokedex_number": 584, "type1": "ice"}
+{"name": "Axew", "pokedex_number": 610, "type1": "dragon"}
+{"name": "Fraxure", "pokedex_number": 611, "type1": "dragon"}
+{"name": "Haxorus", "pokedex_number": 612, "type1": "dragon"}
+{"name": "Cubchoo", "pokedex_number": 613, "type1": "ice"}
+{"name": "Beartic", "pokedex_number": 614, "type1": "ice"}
+{"name": "Cryogonal", "pokedex_number": 615, "type1": "ice"}
+{"name": "Shelmet", "pokedex_number": 616, "type1": "bug"}
+{"name": "Klang", "pokedex_number": 600, "type1": "steel"}
+{"name": "Accelgor", "pokedex_number": 617, "type1": "bug"}
+{"name": "Mienfoo", "pokedex_number": 619, "type1": "fighting"}
+{"name": "Mienshao", "pokedex_number": 620, "type1": "fighting"}
+{"name": "Druddigon", "pokedex_number": 621, "type1": "dragon"}
+{"name": "Bouffalant", "pokedex_number": 626, "type1": "normal"}
+{"name": "Heatmor", "pokedex_number": 631, "type1": "fire"}
+{"name": "Elgyem", "pokedex_number": 605, "type1": "psychic"}
+{"name": "Tornadus", "pokedex_number": 641, "type1": "flying"}
+{"name": "Eelektross", "pokedex_number": 604, "type1": "electric"}
+{"name": "Chespin", "pokedex_number": 650, "type1": "grass"}
+{"name": "Quilladin", "pokedex_number": 651, "type1": "grass"}
+{"name": "Fennekin", "pokedex_number": 653, "type1": "fire"}
+{"name": "Braixen", "pokedex_number": 654, "type1": "fire"}
+{"name": "Froakie", "pokedex_number": 656, "type1": "water"}
+{"name": "Frogadier", "pokedex_number": 657, "type1": "water"}
+{"name": "Bunnelby", "pokedex_number": 659, "type1": "normal"}
+{"name": "Scatterbug", "pokedex_number": 664, "type1": "bug"}
+{"name": "Spewpa", "pokedex_number": 665, "type1": "bug"}
+{"name": "Flabébé", "pokedex_number": 669, "type1": "fairy"}
+{"name": "Floette", "pokedex_number": 670, "type1": "fairy"}
+{"name": "Skiddo", "pokedex_number": 672, "type1": "grass"}
+{"name": "Gogoat", "pokedex_number": 673, "type1": "grass"}
+{"name": "Florges", "pokedex_number": 671, "type1": "fairy"}
+{"name": "Pancham", "pokedex_number": 674, "type1": "fighting"}
+{"name": "Furfrou", "pokedex_number": 676, "type1": "normal"}
+{"name": "Meowstic", "pokedex_number": 678, "type1": "psychic"}
+{"name": "Espurr", "pokedex_number": 677, "type1": "psychic"}
+{"name": "Spritzee", "pokedex_number": 682, "type1": "fairy"}
+{"name": "Swirlix", "pokedex_number": 684, "type1": "fairy"}
+{"name": "Slurpuff", "pokedex_number": 685, "type1": "fairy"}
+{"name": "Aromatisse", "pokedex_number": 683, "type1": "fairy"}
+{"name": "Clauncher", "pokedex_number": 692, "type1": "water"}
+{"name": "Clawitzer", "pokedex_number": 693, "type1": "water"}
+{"name": "Sylveon", "pokedex_number": 700, "type1": "fairy"}
+{"name": "Sliggoo", "pokedex_number": 705, "type1": "dragon"}
+{"name": "Goodra", "pokedex_number": 706, "type1": "dragon"}
+{"name": "Bergmite", "pokedex_number": 712, "type1": "ice"}
+{"name": "Avalugg", "pokedex_number": 713, "type1": "ice"}
+{"name": "Goomy", "pokedex_number": 704, "type1": "dragon"}
+{"name": "Litten", "pokedex_number": 725, "type1": "fire"}
+{"name": "Brionne", "pokedex_number": 729, "type1": "water"}
+{"name": "Torracat", "pokedex_number": 726, "type1": "fire"}
+{"name": "Popplio", "pokedex_number": 728, "type1": "water"}
+{"name": "Yungoos", "pokedex_number": 734, "type1": "normal"}
+{"name": "Gumshoos", "pokedex_number": 735, "type1": "normal"}
+{"name": "Grubbin", "pokedex_number": 736, "type1": "bug"}
+{"name": "Crabrawler", "pokedex_number": 739, "type1": "fighting"}
+{"name": "Xerneas", "pokedex_number": 716, "type1": "fairy"}
+{"name": "Rockruff", "pokedex_number": 744, "type1": "rock"}
+{"name": "Lycanroc", "pokedex_number": 745, "type1": "rock"}
+{"name": "Mudbray", "pokedex_number": 749, "type1": "ground"}
+{"name": "Fomantis", "pokedex_number": 753, "type1": "grass"}
+{"name": "Wishiwashi", "pokedex_number": 746, "type1": "water"}
+{"name": "Lurantis", "pokedex_number": 754, "type1": "grass"}
+{"name": "Bounsweet", "pokedex_number": 761, "type1": "grass"}
+{"name": "Tsareena", "pokedex_number": 763, "type1": "grass"}
+{"name": "Steenee", "pokedex_number": 762, "type1": "grass"}
+{"name": "Comfey", "pokedex_number": 764, "type1": "fairy"}
+{"name": "Passimian", "pokedex_number": 766, "type1": "fighting"}
+{"name": "Mudsdale", "pokedex_number": 750, "type1": "ground"}
+{"name": "Pyukumuku", "pokedex_number": 771, "type1": "water"}
+{"name": "Silvally", "pokedex_number": 773, "type1": "normal"}
+{"name": "Type: Null", "pokedex_number": 772, "type1": "normal"}
+{"name": "Komala", "pokedex_number": 775, "type1": "normal"}
+{"name": "Jangmo-o", "pokedex_number": 782, "type1": "dragon"}
+{"name": "Xurkitree", "pokedex_number": 796, "type1": "electric"}
+{"name": "Cosmoem", "pokedex_number": 790, "type1": "psychic"}
+{"name": "Necrozma", "pokedex_number": 800, "type1": "psychic"}
+{"name": "Cosmog", "pokedex_number": 789, "type1": "psychic"}
+
+Query 4 - Get the name and height of the 10 heaviest Pokémon that are not legendaries.
+{"height_m": 2.5, "name": "Mudsdale", "weight_kg": 920}
+{"height_m": 1.6, "name": "Metagross", "weight_kg": 550}
+{"height_m": 2, "name": "Avalugg", "weight_kg": 505}
+{"height_m": 2.1, "name": "Snorlax", "weight_kg": 460}
+{"height_m": 9.2, "name": "Steelix", "weight_kg": 400}
+{"height_m": 14.5, "name": "Wailord", "weight_kg": 398}
+{"height_m": 2.1, "name": "Aggron", "weight_kg": 360}
+{"height_m": 1.4, "name": "Probopass", "weight_kg": 340}
+{"height_m": 2.8, "name": "Golurk", "weight_kg": 330}
+{"height_m": 2.2, "name": "Torterra", "weight_kg": 310}
+
+Query 5 - Get the 5 steel type Pokémon with the highest defense.
+{"defense": 50, "name": "Aegislash"}
+{"defense": 60, "name": "Excadrill"}
+{"defense": 63, "name": "Togedemaru"}
+{"defense": 70, "name": "Magnemite"}
+{"defense": 70, "name": "Pawniard"}
+
+Query 6 - Get all the Pokémon that resist or are immune to ghost type attacks.
+{"against_ghost": 0, "name": "Pidgey", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Pidgeotto", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Pidgeot", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Rattata", "type1": "normal", "type2": "dark"}
+{"against_ghost": 0, "name": "Spearow", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Fearow", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Raticate", "type1": "normal", "type2": "dark"}
+{"against_ghost": 0, "name": "Jigglypuff", "type1": "normal", "type2": "fairy"}
+{"against_ghost": 0, "name": "Wigglytuff", "type1": "normal", "type2": "fairy"}
+{"against_ghost": 0, "name": "Persian", "type1": "normal", "type2": "dark"}
+{"against_ghost": 0, "name": "Meowth", "type1": "normal", "type2": "dark"}
+{"against_ghost": 0, "name": "Dodrio", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Doduo", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Farfetch'd", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Lickitung", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Chansey", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Kangaskhan", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Tauros", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Eevee", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Porygon", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Ditto", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Snorlax", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Sentret", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Furret", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Hoothoot", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Noctowl", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Aipom", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Igglybuff", "type1": "normal", "type2": "fairy"}
+{"against_ghost": 0.5, "name": "Umbreon", "type1": "dark", "type2": ""}
+{"against_ghost": 0.5, "name": "Murkrow", "type1": "dark", "type2": "flying"}
+{"against_ghost": 0, "name": "Girafarig", "type1": "normal", "type2": "psychic"}
+{"against_ghost": 0, "name": "Dunsparce", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Teddiursa", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Sneasel", "type1": "dark", "type2": "ice"}
+{"against_ghost": 0, "name": "Ursaring", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Houndour", "type1": "dark", "type2": "fire"}
+{"against_ghost": 0.5, "name": "Houndoom", "type1": "dark", "type2": "fire"}
+{"against_ghost": 0, "name": "Porygon2", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Stantler", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Smeargle", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Miltank", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Tyranitar", "type1": "rock", "type2": "dark"}
+{"against_ghost": 0, "name": "Blissey", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Poochyena", "type1": "dark", "type2": ""}
+{"against_ghost": 0.5, "name": "Mightyena", "type1": "dark", "type2": ""}
+{"against_ghost": 0, "name": "Linoone", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Zigzagoon", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Nuzleaf", "type1": "grass", "type2": "dark"}
+{"against_ghost": 0.5, "name": "Shiftry", "type1": "grass", "type2": "dark"}
+{"against_ghost": 0, "name": "Taillow", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Swellow", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Slakoth", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Vigoroth", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Slaking", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Whismur", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Loudred", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Exploud", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Azurill", "type1": "normal", "type2": "fairy"}
+{"against_ghost": 0, "name": "Skitty", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Delcatty", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Sharpedo", "type1": "water", "type2": "dark"}
+{"against_ghost": 0.5, "name": "Carvanha", "type1": "water", "type2": "dark"}
+{"against_ghost": 0, "name": "Spinda", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Zangoose", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Swablu", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0.5, "name": "Crawdaunt", "type1": "water", "type2": "dark"}
+{"against_ghost": 0.5, "name": "Cacturne", "type1": "grass", "type2": "dark"}
+{"against_ghost": 0, "name": "Castform", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Kecleon", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Absol", "type1": "dark", "type2": ""}
+{"against_ghost": 0, "name": "Starly", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Staravia", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Staraptor", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Bidoof", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Bibarel", "type1": "normal", "type2": "water"}
+{"against_ghost": 0, "name": "Ambipom", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Buneary", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Lopunny", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Honchkrow", "type1": "dark", "type2": "flying"}
+{"against_ghost": 0, "name": "Glameow", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Purugly", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Stunky", "type1": "poison", "type2": "dark"}
+{"against_ghost": 0.5, "name": "Skuntank", "type1": "poison", "type2": "dark"}
+{"against_ghost": 0, "name": "Happiny", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Chatot", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Munchlax", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Drapion", "type1": "poison", "type2": "dark"}
+{"against_ghost": 0, "name": "Lickilicky", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Weavile", "type1": "dark", "type2": "ice"}
+{"against_ghost": 0, "name": "Porygon-Z", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Arceus", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Darkrai", "type1": "dark", "type2": ""}
+{"against_ghost": 0, "name": "Patrat", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Regigigas", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Liepard", "type1": "dark", "type2": ""}
+{"against_ghost": 0.5, "name": "Purrloin", "type1": "dark", "type2": ""}
+{"against_ghost": 0, "name": "Pidove", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Tranquill", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Unfezant", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Lillipup", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Herdier", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Watchog", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Stoutland", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Audino", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Sandile", "type1": "ground", "type2": "dark"}
+{"against_ghost": 0.5, "name": "Krookodile", "type1": "ground", "type2": "dark"}
+{"against_ghost": 0.5, "name": "Krokorok", "type1": "ground", "type2": "dark"}
+{"against_ghost": 0.5, "name": "Scraggy", "type1": "dark", "type2": "fighting"}
+{"against_ghost": 0.5, "name": "Scrafty", "type1": "dark", "type2": "fighting"}
+{"against_ghost": 0.5, "name": "Zoroark", "type1": "dark", "type2": ""}
+{"against_ghost": 0.5, "name": "Zorua", "type1": "dark", "type2": ""}
+{"against_ghost": 0, "name": "Cinccino", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Minccino", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Deerling", "type1": "normal", "type2": "grass"}
+{"against_ghost": 0, "name": "Sawsbuck", "type1": "normal", "type2": "grass"}
+{"against_ghost": 0.5, "name": "Pawniard", "type1": "dark", "type2": "steel"}
+{"against_ghost": 0.5, "name": "Bisharp", "type1": "dark", "type2": "steel"}
+{"against_ghost": 0, "name": "Bouffalant", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Rufflet", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0.5, "name": "Vullaby", "type1": "dark", "type2": "flying"}
+{"against_ghost": 0, "name": "Braviary", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0.5, "name": "Mandibuzz", "type1": "dark", "type2": "flying"}
+{"against_ghost": 0.5, "name": "Deino", "type1": "dark", "type2": "dragon"}
+{"against_ghost": 0.5, "name": "Zweilous", "type1": "dark", "type2": "dragon"}
+{"against_ghost": 0.5, "name": "Hydreigon", "type1": "dark", "type2": "dragon"}
+{"against_ghost": 0, "name": "Meloetta", "type1": "normal", "type2": "psychic"}
+{"against_ghost": 0.5, "name": "Greninja", "type1": "water", "type2": "dark"}
+{"against_ghost": 0, "name": "Bunnelby", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Diggersby", "type1": "normal", "type2": "ground"}
+{"against_ghost": 0, "name": "Fletchling", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Pyroar", "type1": "fire", "type2": "normal"}
+{"against_ghost": 0, "name": "Litleo", "type1": "fire", "type2": "normal"}
+{"against_ghost": 0.5, "name": "Pangoro", "type1": "fighting", "type2": "dark"}
+{"against_ghost": 0, "name": "Furfrou", "type1": "normal", "type2": ""}
+{"against_ghost": 0.5, "name": "Yveltal", "type1": "dark", "type2": "flying"}
+{"against_ghost": 0.5, "name": "Incineroar", "type1": "fire", "type2": "dark"}
+{"against_ghost": 0, "name": "Pikipek", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Trumbeak", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Yungoos", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Toucannon", "type1": "normal", "type2": "flying"}
+{"against_ghost": 0, "name": "Gumshoos", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Helioptile", "type1": "electric", "type2": "normal"}
+{"against_ghost": 0, "name": "Heliolisk", "type1": "electric", "type2": "normal"}
+{"against_ghost": 0, "name": "Stufful", "type1": "normal", "type2": "fighting"}
+{"against_ghost": 0, "name": "Bewear", "type1": "normal", "type2": "fighting"}
+{"against_ghost": 0, "name": "Oranguru", "type1": "normal", "type2": "psychic"}
+{"against_ghost": 0, "name": "Silvally", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Type: Null", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Komala", "type1": "normal", "type2": ""}
+{"against_ghost": 0, "name": "Drampa", "type1": "normal", "type2": "dragon"}
+{"against_ghost": 0.5, "name": "Guzzlord", "type1": "dark", "type2": "dragon"}
+
+        --=[ alínea d) ]=--
+
+Query 1 - Get all types ordered by how many legendaries have that type as their primary.
+{"_id": "psychic", "legendcount": 17}
+{"_id": "dragon", "legendcount": 7}
+{"_id": "steel", "legendcount": 6}
+{"_id": "water", "legendcount": 6}
+{"_id": "fire", "legendcount": 5}
+{"_id": "electric", "legendcount": 5}
+{"_id": "grass", "legendcount": 4}
+{"_id": "rock", "legendcount": 4}
+{"_id": "bug", "legendcount": 3}
+{"_id": "normal", "legendcount": 3}
+{"_id": "dark", "legendcount": 3}
+{"_id": "ice", "legendcount": 2}
+{"_id": "ground", "legendcount": 2}
+{"_id": "ghost", "legendcount": 1}
+{"_id": "flying", "legendcount": 1}
+{"_id": "fairy", "legendcount": 1}
+
+Query 2 - Get the 3 hardest types to catch by average.
+{"_id": "ice", "avg_catch_rate": null}
+{"_id": "poison", "avg_catch_rate": null}
+{"_id": "ground", "avg_catch_rate": null}
+
+Query 3 - Get how many fighting type Pokémon are in each generation.
+{"_id": 1, "count": 8}
+{"_id": 2, "count": 3}
+{"_id": 3, "count": 7}
+{"_id": 4, "count": 7}
+{"_id": 5, "count": 15}
+{"_id": 6, "count": 4}
+{"_id": 7, "count": 9}
+
+Query 4 - Get the average stat total of each generation.
+{"_id": 1, "avg_base_total": 416.25165562913907}
+{"_id": 2, "avg_base_total": 413.18}
+{"_id": 3, "avg_base_total": 420.02222222222224}
+{"_id": 4, "avg_base_total": 451.1775700934579}
+{"_id": 5, "avg_base_total": 427.03846153846155}
+{"_id": 6, "avg_base_total": 437.6111111111111}
+{"_id": 7, "avg_base_total": 448.1625}
+
+Query 5 - Get the average stat total and how many Pokémon there are per base egg steps required to hatch it's egg.
+{"_id": 1280, "avg_base_total": 420.0, "pkmncount": 2}
+{"_id": 2560, "avg_base_total": 369.22727272727275, "pkmncount": 22}
+{"_id": 3840, "avg_base_total": 371.5785714285714, "pkmncount": 140}
+{"_id": 5120, "avg_base_total": 413.97935779816515, "pkmncount": 436}
+{"_id": 6400, "avg_base_total": 451.3818181818182, "pkmncount": 55}
+{"_id": 7680, "avg_base_total": 436.34615384615387, "pkmncount": 26}
+{"_id": 8960, "avg_base_total": 502.3076923076923, "pkmncount": 13}
+{"_id": 10240, "avg_base_total": 451.3809523809524, "pkmncount": 42}
+{"_id": 20480, "avg_base_total": 580.0, "pkmncount": 16}
+{"_id": 30720, "avg_base_total": 626.7755102040817, "pkmncount": 49}
+
+Query 6 - Get how many legendaries there are per experience growth tier.
+{"_id": 1059860, "legendcount": 3}
+{"_id": 1250000, "legendcount": 67}
