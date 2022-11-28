@@ -1,0 +1,56 @@
+USE cbd_103341_ex4;
+
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (906, 'Spirigatito', {'grass'}, 9, [40, 61, 54, 45, 45, 65], {'Razor Leaf'});
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (907, 'Floragato', {'grass'}, 9, [61, 80, 63, 60, 63, 83], {'Razor Leaf'});
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (908, 'Meowscarada', {'grass', 'dark'}, 9, [76, 110, 70, 81, 70, 123], {'Razor Leaf', 'Flower Trick'});
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (909, 'Fuecoco', {'fire'}, 9, [67, 45, 59, 63, 40, 36], {'Ember'});
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (910, 'Crocalor', {'fire'}, 9, [81, 55, 78, 90, 58, 49], {'Ember'});
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (911, 'Skeriledge', {'fire', 'ghost'}, 9, [104, 75, 100, 110, 75, 66], {'Ember', 'Torch Song'});
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (912, 'Quaxly', {'water'}, 9, [55, 65, 45, 50, 45, 50], {'Water Gun'});
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (913, 'Quaxwell', {'water'}, 9, [70, 85, 65, 65, 60, 65], {'Water Gun'});
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (914, 'Quaquaval', {'water', 'fighting'}, 9, [85, 120, 80, 85, 75, 85], {'Water Gun', 'Aqua Step'});
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (1, 'Bulbasaur', {'grass', 'poison'}, 1, [45, 49, 49, 65, 65, 45], {'Razor Leaf', 'Outrage'});
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (2, 'Ivysaur', {'grass', 'poison'}, 1, [60, 62, 63, 80, 80, 60], {'Razor Leaf'});
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (3, 'Venusaur', {'grass', 'poison'}, 1, [80, 82, 83, 100, 100, 80], {'Razor Leaf'});
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (155, 'Cyndaquil', {'fire'}, 2, [39, 52, 43, 60, 50, 65], {'Ember'});
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (156, 'Quilava', {'fire'}, 2, [58, 64, 58, 80, 65, 80], {'Ember'});
+INSERT INTO pokemon (id, name, types, generation, stats, moves) VALUES (157, 'Typhlosion', {'fire'}, 2, [78, 84, 78, 09, 85, 100], {'Ember'});
+
+INSERT INTO attacks (name, type, power, accuracy, description, generation) VALUES ('Flower Trick', 'grass', 70, 100, 'The user throws a rigged bouquet of flowers at the target. This attack never misses and always lands a critical hit.', 9);
+INSERT INTO attacks (name, type, power, accuracy, description, generation) VALUES ('Torch Song', 'fire', 80, 100, 'The user blows out raging flames as if singing a song, scorching the target. This also boosts the users Sp. Atk stat.', 9);
+INSERT INTO attacks (name, type, power, accuracy, description, generation) VALUES ('Aqua Step', 'water', 80, 100, 'The user toys with the target and attacks it using light and fluid dance steps. This also boosts the users Speed stat.', 9);
+INSERT INTO attacks (name, type, power, accuracy, description, generation) VALUES ('Razor Leaf', 'grass', 55, 95, 'Sharp-edged leaves are launched to slash at opposing Pokémon. Critical hits land more easily.', 1);
+INSERT INTO attacks (name, type, power, accuracy, description, generation) VALUES ('Ember', 'fire', 40, 100, 'The target is attacked with small flames. This may also leave the target with a burn.', 1);
+INSERT INTO attacks (name, type, power, accuracy, description, generation) VALUES ('Water Gun', 'water', 40, 100, 'The target is blasted with a forceful shot of water.', 1);
+INSERT INTO attacks (name, type, power, accuracy, description, generation) VALUES ('Outrage', 'dragon', 120, 100, 'The user attacks by going on a rampage, then becomes fixated on using this move.', 2);
+INSERT INTO attacks (name, type, power, accuracy, description, generation) VALUES ('Venoshock', 'poison', 65, 100, 'The user drenches the target in a special poisonous liquid. Its power is doubled if the target is poisoned.', 5);
+INSERT INTO attacks (name, type, power, accuracy, description, generation) VALUES ('Thunder', 'electric', 110, 70, 'A wicked thunderbolt is dropped on the target to inflict damage. This may also leave the target with paralysis.', 1);
+INSERT INTO attacks (name, type, power, accuracy, description, generation) VALUES ('Dark Pulse', 'dark', 80, 100, 'The user releases a horrible aura imbued with dark thoughts. This may also make the target flinch.', 4);
+INSERT INTO attacks (name, type, power, accuracy, description, generation) VALUES ('Close Combat', 'fighting', 120, 100, 'The user fights the target up close without guarding itself. It also cuts the users Defense and Sp. Def.', 4);
+INSERT INTO attacks (name, type, power, accuracy, description, generation) VALUES ('Future Sight', 'psychic', 120, 100, 'Two turns after this move is used, a hunk of psychic energy attacks the target.', 2);
+
+INSERT INTO items (name, description, generation) VALUES ('Poké Ball', 'Used for catching Pokémon.', 1);
+INSERT INTO items (name, description, generation) VALUES ('Great Ball', 'Used for catching Pokémon. Slighly better than a Poké Ball', 1);
+INSERT INTO items (name, description, generation) VALUES ('Ultra Ball', 'Used for catching Pokémon. Much better than a Poké Ball', 1);
+INSERT INTO items (name, description, generation) VALUES ('Master Ball', 'Used for catching Pokémon. Can never fail.', 1);
+INSERT INTO items (name, description, generation) VALUES ('Choice Band', 'Multiplies attack by 1.5x. User cant swap attacks.', 3);
+INSERT INTO items (name, description, generation) VALUES ('Choice Scarf', 'Multiplies speed by 1.5x. User cant swap attacks.', 3);
+INSERT INTO items (name, description, generation) VALUES ('Choice Specs', 'Multiplies special attack by 1.5x. User cant swap attacks.', 3);
+INSERT INTO items (name, description, generation) VALUES ('Leftovers', 'Restores some HP at the end of each turn.', 2);
+INSERT INTO items (name, description, generation) VALUES ('Protective Pads', 'User is immune to effects triggered by contact with the target.', 7);
+INSERT INTO items (name, description, generation) VALUES ('Expert Belt', 'Boosts the power of super-effective moves by 1.2x.', 4);
+INSERT INTO items (name, description, generation) VALUES ('Focus Sash', 'If user is full HP, it will endure a potential KO attack, leaving 1 HP.', 4);
+INSERT INTO items (name, description, generation) VALUES ('Weakness Policy', 'If user is hit by a super-effective attack, sharply raises Attack and Special Attack.', 6);
+
+INSERT INTO routes (name, connections, generation) VALUES ('Pallet Town', {'north': 'Route 1', 'south': 'Route 21'}, 1);
+INSERT INTO routes (name, connections, generation) VALUES ('New Bark Town', {'west': 'Route 29'}, 2);
+INSERT INTO routes (name, connections, generation) VALUES ('Littleroot Town', {'north': 'Route 101'}, 3);
+INSERT INTO routes (name, connections, generation) VALUES ('Twinleaf Town', {'north': 'Route 201'}, 4);
+INSERT INTO routes (name, connections, generation) VALUES ('Nuvema Town', {'north': 'Route 1'}, 5);
+INSERT INTO routes (name, connections, generation) VALUES ('Vaniville Town', {'north': 'Route 1'}, 6);
+INSERT INTO routes (name, connections, generation) VALUES ('Hauoli City', {'north': 'Route 2', 'east': 'Route 1'}, 7);
+INSERT INTO routes (name, connections, generation) VALUES ('Indigo Plateau', {'south': 'Victory Road', 'west': 'Mt. Silver'}, 1);
+INSERT INTO routes (name, connections, generation) VALUES ('Mt. Moon', {'west': 'Pewter City', 'east': 'Cerulean City'}, 1);
+INSERT INTO routes (name, connections, generation) VALUES ('Azalea Town', {'east': 'Route 33', 'west': 'Ilex Forest'}, 2);
+INSERT INTO routes (name, connections, generation) VALUES ('Driftveil City', {'north': 'Clay Tunnel', 'west': 'Route 6', 'south': 'Cold Storage', 'east': 'Driftveil Drawbridge'}, 5);
+INSERT INTO routes (name, connections, generation) VALUES ('Petalburg City', {'east': 'Route 102', 'west': 'Route 104'}, 3);
