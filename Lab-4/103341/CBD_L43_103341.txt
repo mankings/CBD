@@ -1,0 +1,53 @@
+// importing
+load csv with headers from 'file:/git_selection.csv' as row
+create (:Coder { num: row.num, svn_id: row.svn_id, name: row.real_name, project: row.project_name, role: row.role_on_project, org: row.organization })
+
+#1
+match (c:Coder)
+return c
+
+#2
+match (c:Coder)
+return c.name
+
+#3
+match (p:Project)<-[:WORKS_ON]-(:Coder)
+return p
+
+#4
+match (c:Coder)-[:WORKS_ON]->(p:Project)
+with c.name as coder, collect(p.name) as projects
+return coder, projects
+
+#5
+match (c:Coder)-[:WORKS_ON]->(p:Project)
+with c.name as coder, count(p) as projects_count
+return coder, projects_count
+order by projects_count desc
+
+#6
+match (c:Coder)-[:WORKS_ON]->(p:Project)
+with p.name as project, count(c) as workers
+return project, workers
+
+#7
+match (c:Coder)-[r:WORKS_ON]->(p:Project)
+where r.role = 'Committer'
+with p.name as project, count(c) as commiters
+return project, commiters
+
+#8
+match (atm:Coder)-[:WORKS_ON]->(atm_p:Project)
+where atm.svn_id = 'atm'
+with atm, collect(atm_p) as atm_projects
+match (c:Coder)-[:WORKS_ON]->(p:Project)
+where p in atm_projects
+return atm.name, c.name, p.name
+
+#9
+match (atm:Coder)-[atm_r:WORKS_ON]->(atm_p:Project)
+where atm.svn_id = 'atm' and atm_r.role = 'PMC'
+with atm, collect(atm_p) as atm_projects
+match (c:Coder)-[r:WORKS_ON]->(p:Project)
+where p in atm_projects and r.role = 'Committer'
+return atm.name, c.name, p.name

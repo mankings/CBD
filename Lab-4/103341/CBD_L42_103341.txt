@@ -1,0 +1,138 @@
+// 103341
+
+#1
+match (n)-[:DIRECTED]->(movie)<-[:ACTED_IN]-(n)
+return n.name as actors, movie.title as title
+
+#2
+match (actor)-[:ACTED_IN]->(movie)
+where movie.released > 2005
+with movie, collect(actor.name) as actors
+return actors, movie.title as title
+
+#3
+match (node1)-[relation]->(node2)
+with node1, node2, count(relation) as relation_count
+where relation_count > 1
+return node1.name as person, node2.title as movie
+
+#4
+match (p1)-[:REVIEWED]->(movie)<-[:REVIEWED]-(p2)
+return p1.name, p2.name, movie.title
+
+#5 
+match (p1:Person)-[:ACTED_IN]->(movie:Movie)<-[:ACTED_IN]-(p2:Person)
+with p1, p2, count(movie) as movie_count
+where movie_count > 1
+return p1.name, p2.name
+
+#6
+match (p)-[:ACTED_IN]->(movie:Movie {title: 'Apollo 13'})
+with movie.released - p.born as age
+return avg(age) as avg_age
+
+#7
+match (p:Person)-[:ACTED_IN]->(movie:Movie)
+with movie, avg(movie.released - p.born) as age
+return movie.title, age
+order by age desc
+limit 10
+
+#8
+match (p:Person)-[:ACTED_IN]->(movie:Movie)
+with movie, avg(movie.released - p.born) as age
+order by age asc
+limit 1
+match (p_:Person)-[:ACTED_IN]->(movie_:Movie)
+where movie_ = movie
+return movie_, p_
+
+#9
+match (p1:Person {name: 'John Cusack'}),
+(p2:Person {name: 'Demi Moore'}),
+p = shortestPath((p1)-[*]-(p2))
+return p
+
+#10
+match 
+(p1:Person {name: 'Keanu Reeves'}),
+(p2:Person {name: 'Tom Cruise'}),
+p = shortestPath((p1)-[*]-(p2))
+return p1.name, p2.name, length(p) as len_sp
+order by len_sp asc
+limit 1
+
+#11
+match 
+(p1:Person), (p2:Person),
+p = shortestPath((p1)-[*]-(p2))
+where p1.name contains 'Jim' and p2.name contains 'Kevin'
+return p1.name, p2.name, length(p) as len_sp
+order by len_sp asc
+limit 1
+
+#12
+match 
+(p1:Person {name: 'Jim Cash'}),
+p = shortestPath((p1)-[*1..2]-(p2))
+where length(p) = 2 and p1 <> p2
+return count(p2) as people
+
+#13
+match 
+(p1:Person {name: 'Kevin Bacon'}),
+p = shortestPath((p1)-[*]-(p2))
+where p1 <> p2
+return p2.name as name, length(p) as len_sp
+order by len_sp desc
+limit 1
+
+#14
+match 
+p = shortestPath((p1:Person)-[*]-(p2:Person))
+where p1 <> p2
+return p2.name as name, length(p) as len_sp
+order by len_sp desc
+limit 1
+
+#15
+match 
+p = shortestPath((p1:Person)-[*]-(p2:Person))
+where p1 <> p2
+with length(p) as len_sp
+return len_sp, count(len_sp) as count_sp_tiers
+order by len_sp desc
+
+#16
+match 
+p = shortestPath((p1:Person)-[:ACTED_IN*]-(p2:Person))
+where p1 <> p2
+with avg(length(p))as avg_len, p1
+return p1.name as person1, avg_len
+order by avg_len asc
+limit 10
+
+#17
+match (p:Person)-[r:ACTED_IN]->(:Movie)
+where ANY(character in r.roles where character starts with "Dr.")
+return p, r.roles
+
+// all movies released in 2000, ordered by rating
+#18
+match (m:Movie)<-[r:REVIEWED]-(p:Person)
+where m.released = 2000
+with m, avg(r.rating) as avg_rating
+return m, avg_rating
+order by avg_rating desc
+
+// all pairs of actors that have acted in the same movie
+#19
+match (p1:Person)-[:ACTED_IN]->(m:Movie)<-[:ACTED_IN]-(p2:Person)
+where p1 <> p2
+return p1, p2
+
+// everyone that has acted in movies directed by "Lilly Wachowski"
+#20
+match (p1:Person)-[:ACTED_IN]->(m:Movie)<-[:DIRECTED]-(p2:Person)
+where p2.name = "Lilly Wachowski"
+return p1
